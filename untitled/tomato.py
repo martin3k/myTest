@@ -25,17 +25,17 @@ def main():
             print(f'🍅 tomato {WORK_MINUTES} minutes. Ctrl+C to exit')
             tomato(WORK_MINUTES, 'It is time to take a break')
             print(f'🛀 break {BREAK_MINUTES} minutes. Ctrl+C to exit')
-            tomato(BREAK_MINUTES, 'It is time to work')
+            tomato(BREAK_MINUTES, '开始工作吧')
 
         elif sys.argv[1] == '-t':
             minutes = int(sys.argv[2]) if len(sys.argv) > 2 else WORK_MINUTES
             print(f'🍅 tomato {minutes} minutes. Ctrl+C to exit')
-            tomato(minutes, 'It is time to take a break')
+            tomato(minutes, '休息一下')
 
         elif sys.argv[1] == '-b':
             minutes = int(sys.argv[2]) if len(sys.argv) > 2 else BREAK_MINUTES
             print(f'🛀 break {minutes} minutes. Ctrl+C to exit')
-            tomato(minutes, 'It is time to work')
+            tomato(minutes, '开始工作吧')
 
         elif sys.argv[1] == '-h':
             help()
@@ -95,7 +95,7 @@ def notify_me(msg):
         if sys.platform == 'darwin':
             # macos desktop notification
             subprocess.run(['terminal-notifier', '-title', '🍅', '-message', msg])
-            subprocess.run(['say', '-v', 'Daniel', msg])
+            subprocess.run(['say', '-v', 'Ting-Ting', msg])
         elif sys.platform.startswith('linux'):
             # ubuntu desktop notification
             subprocess.Popen(["notify-send", '🍅', msg])
