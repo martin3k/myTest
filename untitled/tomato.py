@@ -30,7 +30,7 @@ def main():
         elif sys.argv[1] == '-t':
             minutes = int(sys.argv[2]) if len(sys.argv) > 2 else WORK_MINUTES
             print(f'🍅 tomato {minutes} minutes. Ctrl+C to exit')
-            tomato(minutes, '休息一下')
+            tomato(minutes, '你需要休息一下')
 
         elif sys.argv[1] == '-b':
             minutes = int(sys.argv[2]) if len(sys.argv) > 2 else BREAK_MINUTES
